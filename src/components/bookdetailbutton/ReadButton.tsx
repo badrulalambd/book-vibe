@@ -19,7 +19,7 @@ const ReadButtonPage = ({book} : IBookProp) => {
 
     return (
         <div>
-            <button onClick={handleReadBook} className="btn btn-secondary">Read</button>
+            <button onClick={handleReadBook} className="btn btn-secondary">Mark As Read</button>
         </div>
     );
 };

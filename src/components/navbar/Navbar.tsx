@@ -9,7 +9,7 @@ const menuLinks = <>
 
 const Navbar = () => {
     return (
-        <div className='bg-base-100 shadow-sm'>
+        <div className='bg-base-100 shadow-sm fixed top-0 left-0 right-0 z-999'>
             <div className="container mx-auto navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -29,8 +29,9 @@ const Navbar = () => {
                         {menuLinks}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <div className="navbar-end flex gap-3">
+                    <button className="btn btn-soft btn-secondary">Log In</button>
+                    <button className="btn btn-secondary">Sign Up</button>                 
                 </div>
             </div>
         </div>
