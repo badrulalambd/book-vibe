@@ -36,8 +36,7 @@ const BooksGridPage = () => {
             <div className='text-center'>
                 <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as "rating" | "pages" | "year")}
-                defaultValue="Pick a color" className="select">
+                onChange={(e) => setSortBy(e.target.value as "rating" | "pages" | "year")}>
                     <option disabled={true}>Sort By</option>
                     <option value={"rating"}>Rating</option>
                     <option value={"pages"}>Number of Pages</option>
