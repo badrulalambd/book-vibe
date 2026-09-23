@@ -2,19 +2,30 @@
 
 import { BookContext } from '@/context/ThemeContext';
 import React, { useContext } from 'react';
+import { Bounce, toast } from 'react-toastify';
 
 interface IBookProp {
     book: IBookType
 }
 
-const ReadButtonPage = ({book} : IBookProp) => {
+const ReadButtonPage = ({ book }: IBookProp) => {
 
     const value = useContext(BookContext);
-    const {readBook, setReadBook} = value;
+    const { readBook, setReadBook } = value;
 
     const handleReadBook = () => {
         setReadBook([...readBook, book]);
-        console.log("ReadBook Data: ", readBook);
+        toast.success('Marked as read!', {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            transition: Bounce,
+        });
     }
 
     return (

@@ -3,6 +3,7 @@
 
 import { BookContext } from '@/context/ThemeContext';
 import { useContext } from 'react';
+import { Bounce, toast } from 'react-toastify';
 import { createContext } from 'vm';
 
 interface IBookProp {
@@ -16,7 +17,17 @@ const WishlistButtonPage = ({book} : IBookProp) => {
 
     const handleWishlist = () => {
         setWishlist([...wishlist, book]);
-        console.log("Wishlist Data: ", wishlist);
+        toast.success('Marked as read!', {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        });
     }
     
 

@@ -5,28 +5,28 @@ import { BookContext } from '@/context/ThemeContext';
 import { useContext, useState } from 'react';
 
 const BooksGridPage = () => {
-     const [sortBy, setSortBy] = useState<"rating" | "pages" | "year">("rating");
-    
-        const value = useContext(BookContext);
-        const { readBook, wishlist } = value;
-    
-        const sortBooks = (books : IBookType[]) => {
-    
-            const sortedBooks = [...books];
-            if(sortBy=="rating"){
-                sortedBooks.sort((a,b) => b.rating-a.rating);
-            }
-            else if(sortBy == "pages") {
-                sortedBooks.sort((a,b) => a.totalPages-b.totalPages);
-            }
-            else{
-                sortedBooks.sort((a,b) => a.yearOfPublishing-b.yearOfPublishing);
-            }
-            return sortedBooks;
+    const [sortBy, setSortBy] = useState<"rating" | "pages" | "year">("rating");
+
+    const value = useContext(BookContext);
+    const { readBook, wishlist } = value;
+
+    const sortBooks = (books: IBookType[]) => {
+
+        const sortedBooks = [...books];
+        if (sortBy == "rating") {
+            sortedBooks.sort((a, b) => b.rating - a.rating);
         }
-    
-        const sortedReadBooks = sortBooks(readBook);
-        const sortedWishlistBooks = sortBooks(wishlist);
+        else if (sortBy == "pages") {
+            sortedBooks.sort((a, b) => a.totalPages - b.totalPages);
+        }
+        else {
+            sortedBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
+        }
+        return sortedBooks;
+    }
+
+    const sortedReadBooks = sortBooks(readBook);
+    const sortedWishlistBooks = sortBooks(wishlist);
     return (
         <div className='container mx-auto m-20 rounded-sm flex flex-col gap-10'>
             <div className='bg-gray-200 mt-15 p-20'>
@@ -35,8 +35,8 @@ const BooksGridPage = () => {
 
             <div className='text-center'>
                 <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as "rating" | "pages" | "year")}>
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value as "rating" | "pages" | "year")}>
                     <option disabled={true}>Sort By</option>
                     <option value={"rating"}>Rating</option>
                     <option value={"pages"}>Number of Pages</option>

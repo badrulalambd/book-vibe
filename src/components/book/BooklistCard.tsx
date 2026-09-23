@@ -6,7 +6,7 @@ interface IBookProp {
 
 const BooklistCard = ({ book }: IBookProp) => {
     return (
-        <div className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:flex-row">
+        <div className="my-5 group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:flex-row">
 
             {/* Book Image */}
             <div className="flex w-full shrink-0 items-center justify-center bg-gradient-to-br from-orange-50 to-pink-50 p-5 sm:w-2/5">
@@ -96,7 +96,7 @@ const BooklistCard = ({ book }: IBookProp) => {
                 </div>
 
                 {/* Button */}
-                <button className="mt-5 w-fit rounded-lg bg-gradient-to-r from-orange-500 to-pink-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+                <button className="mt-5 w-fit rounded-lg bg-linear-to-r from-orange-500 to-pink-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
                     View Details →
                 </button>
             </div>
