@@ -1,10 +1,10 @@
-##📚 Book-Vibe
+## 📚 Book-Vibe
 ---
 Book-Vibe is a modern book management and reading-tracking web application built with Next.js. Users can explore books, view detailed information, mark books as read, add books to their wishlist, and track their reading progress through an interactive chart.
 
 🚀 Live site: https://book-vibe-two-kappa.vercel.app
 
-##📖 Project Overview
+## 📖 Project Overview
 ---
 Book-Vibe provides a simple and user-friendly platform for book lovers to discover and organize their reading list.
 
@@ -14,7 +14,7 @@ Home — Browse all available books in a responsive grid with essential book inf
 Listed Book — Manage books marked as read and books added to the wishlist through separate tabs.
 Pages to Read — Visualize reading-related information using an interactive chart.
 
-##🛠️ Technologies Used
+## 🛠️ Technologies Used
 ---
 Next.js
 React.js
@@ -25,7 +25,7 @@ React Icons
 Chart.js / Recharts
 Git & GitHub
 
-##✨ Key Features
+## ✨ Key Features
 ---
 1. 📚 Browse Books
 
